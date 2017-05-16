@@ -10,8 +10,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.Usuario;
+import servlets.ModificarUsuarioCtrl;
 /**
  *
  * @author sebastian
@@ -19,7 +26,7 @@ import modelo.Usuario;
 public class UsuarioDB {
     private final String TABLE_NAME = "Usuario";
     
-    private final String SQL_INSERT = "INSERT INTO " + TABLE_NAME +" (nombre,apellido,cedula,estado,nombreUsuario,clave,tipo,telefono) VALUES (?,?,?,?,?,?,?,?)";
+    private final String SQL_INSERT = "INSERT INTO " + TABLE_NAME +" (nombre,apellido,cedula,estado,nombreUsuario,clave,tipo,telefono,fechaNacimiento) VALUES (?,?,?,?,?,?,?,?,?)";
     private final String SQL_INSERT_ID = "SELECT @@identity AS id";
     private final String SQL_VALID = "SELECT * FROM " + TABLE_NAME + " WHERE nombreUsuario = ? AND clave = ? AND tipo = ?";
     private final String SQL_USUARIOS = "SELECT * FROM " + TABLE_NAME + " u ORDER BY u.idUsuario DESC";
@@ -58,6 +65,7 @@ public class UsuarioDB {
             statement.setString(index++, usuario.getClave());
             statement.setString(index++, usuario.getTipo());
             statement.setString(index++, usuario.getTelefono());
+            statement.setString(index++, usuario.getFechaNacimientoFormat());
             System.out.println("Ejecutando query: " + SQL_INSERT);
             rows = statement.executeUpdate();
             System.out.println("Registros Afectados :" + rows);
@@ -102,6 +110,15 @@ public class UsuarioDB {
                 usuario.setClave(rs.getString(i++));
                 usuario.setTipo(rs.getString(i++));
                 usuario.setTelefono(rs.getString(i++));
+                DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+                Date date = null;
+                String fechaNacimiento = rs.getString(i++);
+                try {
+                    date = format.parse(fechaNacimiento);
+                } catch (ParseException ex) {
+                    Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                usuario.setFechaNacimiento(date);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -136,6 +153,15 @@ public class UsuarioDB {
                 usuario.setClave(rs.getString(i++));
                 usuario.setTipo(rs.getString(i++));
                 usuario.setTelefono(rs.getString(i++));
+                DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+                Date date = null;
+                String fechaNacimiento = rs.getString(i++);
+                try {
+                    date = format.parse(fechaNacimiento);
+                } catch (ParseException ex) {
+                    Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                usuario.setFechaNacimiento(date);
                 
                 usuarios.add(usuario);
             }
@@ -173,6 +199,15 @@ public class UsuarioDB {
                 usuario.setClave(rs.getString(i++));
                 usuario.setTipo(rs.getString(i++));
                 usuario.setTelefono(rs.getString(i++));
+                 DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+                Date date = null;
+                String fechaNacimiento = rs.getString(i++);
+                try {
+                    date = format.parse(fechaNacimiento);
+                } catch (ParseException ex) {
+                    Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                usuario.setFechaNacimiento(date);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -234,6 +269,15 @@ public class UsuarioDB {
                 usuario.setClave(rs.getString(i++));
                 usuario.setTipo(rs.getString(i++));
                 usuario.setTelefono(rs.getString(i++));
+                 DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+                Date date = null;
+                String fechaNacimiento = rs.getString(i++);
+                try {
+                    date = format.parse(fechaNacimiento);
+                } catch (ParseException ex) {
+                    Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                usuario.setFechaNacimiento(date);
                 
                 jugadores.add(usuario);
             }
@@ -271,6 +315,15 @@ public class UsuarioDB {
                 usuario.setClave(rs.getString(i++));
                 usuario.setTipo(rs.getString(i++));
                 usuario.setTelefono(rs.getString(i++));
+                 DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+                Date date = null;
+                String fechaNacimiento = rs.getString(i++);
+                try {
+                    date = format.parse(fechaNacimiento);
+                } catch (ParseException ex) {
+                    Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                usuario.setFechaNacimiento(date);
                 
                 jugadores.add(usuario);
             }

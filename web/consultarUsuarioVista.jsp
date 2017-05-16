@@ -71,6 +71,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="fechaNacimiento" class="col-sm-4 control-label">Fecha de Nacimiento</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" readonly id="fechaNacimiento" name="fechaNacimiento" value="${usuario.fechaNacimientoFormat}">
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="tipo" class="col-sm-4 control-label">Tipo</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" readonly id="tipo" name="tipo" value="${usuario.tipo}">

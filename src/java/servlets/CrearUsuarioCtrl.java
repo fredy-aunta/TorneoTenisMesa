@@ -9,6 +9,12 @@ package servlets;
 import db.UsuarioDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -59,6 +65,15 @@ public class CrearUsuarioCtrl extends HttpServlet {
             usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
             usuario.setClave(request.getParameter("clave"));
             usuario.setTelefono(request.getParameter("telefono"));
+            Date date = null;
+            String fechaNacimiento = request.getParameter("fechaNacimiento");
+            DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+            try {
+                date = format.parse(fechaNacimiento);
+            } catch (ParseException ex) {
+                Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            usuario.setFechaNacimiento(date);
             usuario.setTipo(tipo);
             int idUsuario = usuarioDB.insert(usuario);
             request.setAttribute("idUsuario", idUsuario);

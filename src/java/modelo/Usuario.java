@@ -1,5 +1,8 @@
 package modelo;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @author Sebasti�n
  * @version 1.0
@@ -19,6 +22,7 @@ public class Usuario {
 	private String nombreUsuario;
 	private String tipo;
         private String telefono;
+        private Date fechaNacimiento;
 
 	public Usuario(){
 
@@ -96,11 +100,16 @@ public class Usuario {
         this.telefono = telefono;
     }
 
-    @Override
-    public String toString() {
-        return idUsuario + " : " + nombre; //To change body of generated methods, choose Tools | Templates.
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
     
-	
+    public String getFechaNacimientoFormat(){
+        SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd");
+        return dt1.format(this.getFechaNacimiento());
+    }
 }//end Usuario

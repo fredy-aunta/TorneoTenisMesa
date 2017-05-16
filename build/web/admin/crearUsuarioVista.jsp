@@ -56,6 +56,12 @@
                                     <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="fechaNacimiento" class="col-sm-4 control-label">Fecha de Nacimiento</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="fechaNacimiento" name="fechaNacimiento" placeholder="yyyy-mm-dd">
+                                </div>
+                            </div>
                             </div>
                             <div id="login_fields" class="hide user_fields">
                             <div class="form-group">
