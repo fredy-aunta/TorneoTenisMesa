@@ -32,7 +32,9 @@ import servlets.ModificarUsuarioCtrl;
  */
 public class PartidoDB {
     private final String TABLE_NAME = "Partido";
-    private final String SQL_INSERT = "INSERT INTO " + TABLE_NAME +" (nombre, idEstructura, cantidadJugadores, cantidadMesas) VALUES (?,?,?,?)";
+    private final String SQL_INSERT = "INSERT INTO partido (fechaHora, idTorneo, idPartidoTorneo) VALUES (?,?,?)";
+    private final String SQL_INSERT_ID = "SELECT @@identity AS id";
+    private final String SQL_INSERT_USUARIO_PARTIDO = "INSERT INTO usuariopartido (idPartido,idUsuario) VALUES (?,?);";
     private final String SQL_PARTIDOS = "SELECT p.idPartido, p.fechaHora, p.idPartidoTorneo," +
 "	group_concat(up.idUsuario order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') usuarios," +
 "    group_concat(up.resultado order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') resultados," +
@@ -58,8 +60,49 @@ public class PartidoDB {
     public PartidoDB() {
     }
     
-    public int insert(Partido partido){
-        return 0;
+    public int insert(Partido partido, int idTorneo){
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet rs;
+        int rows, idPartido = 0;
+        ArrayList<Integer> idUsuarios;
+        try {
+            int index = 1;
+            connection = DBManager.getConnection();
+            statement = connection.prepareStatement(SQL_INSERT);
+            statement.setString(index++, partido.getFechaHoraFull());
+            statement.setInt(index++, idTorneo);
+            statement.setInt(index++, partido.getIdPartidoTorneo());
+            System.out.println("Ejecutando query: " + SQL_INSERT);
+            rows = statement.executeUpdate();
+            System.out.println("Registros Afectados :" + rows);
+            /**
+             * Obtiene el id del torneo que se acabo de insertar
+             */
+            statement = connection.prepareStatement(SQL_INSERT_ID);
+            rs = statement.executeQuery();
+            rs.next();
+            idPartido = rs.getInt(1);
+            idUsuarios = new ArrayList<Integer>();
+            idUsuarios.add(partido.getIdJugador1());
+            idUsuarios.add(partido.getIdJugador2());
+            idUsuarios.add(partido.getIdArbitro());
+            for (int i = 0; i < idUsuarios.size(); i++) {
+                index = 1;
+                Integer idUsuario = idUsuarios.get(i);
+                statement = connection.prepareStatement(SQL_INSERT_USUARIO_PARTIDO);
+                statement.setInt(index, idUsuario);
+                System.out.println("Ejecutando query: " + SQL_INSERT_USUARIO_PARTIDO);
+                rows = statement.executeUpdate();
+                System.out.println("Registros Afectados :" + rows);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            DBManager.close(statement);
+            DBManager.close(connection);
+        }
+        return idPartido;
     }
     
     public ArrayList<Partido> getAllPartidos(int idTorneo){
