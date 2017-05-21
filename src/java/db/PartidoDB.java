@@ -91,6 +91,7 @@ public class PartidoDB {
                 index = 1;
                 Integer idUsuario = idUsuarios.get(i);
                 statement = connection.prepareStatement(SQL_INSERT_USUARIO_PARTIDO);
+                statement.setInt(index++, idPartido);
                 statement.setInt(index, idUsuario);
                 System.out.println("Ejecutando query: " + SQL_INSERT_USUARIO_PARTIDO);
                 rows = statement.executeUpdate();

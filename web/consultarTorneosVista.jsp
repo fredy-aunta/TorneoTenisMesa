@@ -27,8 +27,10 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         
-                        <c:if test="${errorLogin!=null}">
-                            <div class="alert alert-danger"><c:out value="${errorLogin}" /></div>
+                        <c:if test="${idUsuario>0}">
+                            <div class="alert alert-success" id="msgCreacion">
+                                Usuario Creado
+                            </div>
                         </c:if>
                             <div class="row">
                                 <div class="col-md-4">
