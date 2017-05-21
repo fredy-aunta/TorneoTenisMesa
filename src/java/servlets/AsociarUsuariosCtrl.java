@@ -84,7 +84,11 @@ public class AsociarUsuariosCtrl extends HttpServlet {
             }
         }
         if (idsPartidos.size() == idsPartidosTorneo.length) {
-//            Message success
+            session.removeAttribute("torneoSession");
+            session.removeAttribute("fechaHoraTorneoSession");
+            session.removeAttribute("jugadoresSesion");
+            session.removeAttribute("arbitrosSesion");
+            response.sendRedirect("/TorneoTenisMesa/ConsultarTorneosCtrl");
         } else {
 //            Message error
         }

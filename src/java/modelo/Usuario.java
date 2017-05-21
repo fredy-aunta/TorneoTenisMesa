@@ -1,5 +1,6 @@
 package modelo;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,7 +9,7 @@ import java.util.Date;
  * @version 1.0
  * @created 10-abr.-2017 11:34:17 p. m.
  */
-public class Usuario {
+public class Usuario implements Serializable{
         public static final String TIPO_ADMINISTRADOR = "Administrador";
         public static final String TIPO_JUGADOR = "Jugador";
         public static final String TIPO_ARBITRO = "Arbitro";
