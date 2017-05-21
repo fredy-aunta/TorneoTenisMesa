@@ -43,6 +43,7 @@
                             <c:otherwise>
                                 <div class="row">
                                     <div class="col-md-6">
+                                        <form action="/TorneoTenisMesa/AsociarUsuarios" method="post" id="partidosForm">
                                         <table class="table table-condensed">
                                             <thead>
                                                 <tr>
@@ -59,14 +60,20 @@
                                                     <td>${partido.idPartidoTorneo}</td>
                                                     <td>${partido.fechaHoraF}</td>
                                                     <td>${partido.idJugador1} - ${partido.idJugador2}</td>
+                                                <input type="hidden" name="idPartidoTorneo[]" value="${partido.idPartidoTorneo}"/>
+                                                <input type="hidden" name="idJugador1[]" value="${partido.idJugador1}"/>
+                                                <input type="hidden" name="idJugador2[]" value="${partido.idJugador2}"/>
+                                                <input type="hidden" name="fechas[]" value="${partido.fechaHoraF}"/>
                                                     <!--<td>${partido.resultado1} - ${partido.resultado2}</td>-->
                                                     <td>
-                                                        <a class="btn btn-info btn-xs disabled" href="/TorneoTenisMesa/ConsultarPartidoCtrl?idPartido=${partido.idPartido}">Modificar</a>
+                                                        <!--<a class="btn btn-info btn-xs disabled" href="/TorneoTenisMesa/ConsultarPartidoCtrl?idPartido=${partido.idPartido}">Modificar</a>-->
                                                     </td>
                                                 </tr>
                                                 </c:forEach>
                                             </tbody>
                                         </table>
+                                            <button type="submit" class="btn btn-success">Siguiente</button>
+                                        </form>
                                     </div>
                                 </div>
                             </c:otherwise>

@@ -60,6 +60,10 @@
         <servlet-name>ModificarPartidoCtrl</servlet-name>
         <servlet-class>servlets.ModificarPartidoCtrl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AsociarUsuariosCtrl</servlet-name>
+        <servlet-class>servlets.AsociarUsuariosCtrl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>ModificarPartidoCtrl</servlet-name>
         <url-pattern>/ModificarPartidoCtrl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AsociarUsuariosCtrl</servlet-name>
+        <url-pattern>/AsociarUsuarios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
