@@ -45,7 +45,7 @@ public class DefinirUsuariosTorneoCtrl extends HttpServlet {
         jugadoresSeleccionados = request.getParameterValues("jugadoresSelec[]");
         arbitrosSeleccionados = request.getParameterValues("arbitrosSelec[]");
         ArrayList<Usuario> jugadores = construirUsuarios(new ArrayList<String>(Arrays.asList(jugadoresSeleccionados)));
-        ArrayList<Usuario> arbitros = construirUsuarios(new ArrayList<String>(Arrays.asList(jugadoresSeleccionados)));
+        ArrayList<Usuario> arbitros = construirUsuarios(new ArrayList<String>(Arrays.asList(arbitrosSeleccionados)));
         torneoDB.definirUsuarios(jugadores, arbitros);
         session.setAttribute("jugadoresSesion", jugadores);
         session.setAttribute("arbitrosSesion", arbitros);
