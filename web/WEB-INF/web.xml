@@ -76,6 +76,10 @@
         <servlet-name>IngresarResultadoPartidoCtrl</servlet-name>
         <servlet-class>servlets.IngresarResultadoPartidoCtrl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultarResultadosPartidosTorneo</servlet-name>
+        <servlet-class>servlets.ConsultarResultadosPartidosTorneoCtrl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -151,6 +155,10 @@
     <servlet-mapping>
         <servlet-name>IngresarResultadoPartidoCtrl</servlet-name>
         <url-pattern>/IngresarResultadoPartido</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarResultadosPartidosTorneo</servlet-name>
+        <url-pattern>/ConsultarResultadosPartidosTorneo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
