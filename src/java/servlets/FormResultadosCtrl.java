@@ -35,6 +35,8 @@ public class FormResultadosCtrl extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         int idPartido;
+        String edit;
+        edit = request.getParameter("edit");
         try {
             idPartido = Integer.parseInt(request.getParameter("idPartido"));
         } catch (NumberFormatException e) {
@@ -44,6 +46,10 @@ public class FormResultadosCtrl extends HttpServlet {
         Partido partido = partidoDB.buscarPartido(idPartido);
         
         request.setAttribute("partido", partido);
+        if (edit == null) {
+            edit = "1";
+        }
+        request.setAttribute("ingresarResultados", (!edit.equals("0")));
         request.getRequestDispatcher("/arbitro/resultadoPartidoVista.jsp").forward(request, response);
     }
 

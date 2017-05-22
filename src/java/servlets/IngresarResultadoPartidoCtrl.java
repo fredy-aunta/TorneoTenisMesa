@@ -45,6 +45,8 @@ public class IngresarResultadoPartidoCtrl extends HttpServlet {
         String idPartido = request.getParameter("idPartido");
         String idJugador1 = request.getParameter("idJugador1");
         String idJugador2 = request.getParameter("idJugador2");
+        String idPartidoTorneo = request.getParameter("idPartidoTorneo");
+        
         Partido partido = new Partido();
         Torneo torneo = null;
         try {
@@ -53,6 +55,7 @@ public class IngresarResultadoPartidoCtrl extends HttpServlet {
             partido.setIdPartido(Integer.parseInt(idPartido));
             partido.setIdJugador1(Integer.parseInt(idJugador1));
             partido.setIdJugador2(Integer.parseInt(idJugador2));
+            partido.setIdPartidoTorneo(Integer.parseInt(idPartidoTorneo));
             torneo = torneoDB.buscarTorneoPartido(Integer.parseInt(idPartido));
         } catch (NumberFormatException e) {
 //            redirect back

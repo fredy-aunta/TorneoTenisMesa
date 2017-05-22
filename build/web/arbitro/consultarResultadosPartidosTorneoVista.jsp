@@ -50,8 +50,8 @@
                                             <th>Id Partido</th>
                                             <th>Fecha - hora</th>
                                             <th>Jugadores</th>
-                                            <th>Resultados</th>
-                                            <!--<th>&nbsp;</th>-->
+                                            <!--<th>Resultados</th>-->
+                                            <th>&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -60,11 +60,10 @@
                                             <td>${partido.idPartidoTorneo}</td>
                                             <td>${partido.fechaHoraF}</td>
                                             <td>${partido.idJugador1} - ${partido.idJugador2}</td>
-                                            <td>${partido.resultado1} - ${partido.resultado2}</td>
-<!--                                            <td>
-                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/FormResultados?idPartido=${partido.idPartido}">Ingresar Resultados</a>
-                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/ConsultarPartidoCtrl?idPartido=${partido.idPartido}">Modificar</a>
-                                            </td>-->
+                                            <!--<td>${partido.resultado1} - ${partido.resultado2}</td>-->
+                                            <td>
+                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/FormResultados?idPartido=${partido.idPartido}&edit=0">Consultar Resultados</a>
+                                            </td>
                                         </tr>
                                         </c:forEach>
                                     </tbody>
