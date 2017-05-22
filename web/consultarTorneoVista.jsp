@@ -74,6 +74,7 @@
                             </div>
                             <div class="form-group text-right">
                                 <div class="col-sm-offset-4 col-sm-8">
+                                    <a id="modificarUsuario" href="/TorneoTenisMesa/ConsultarPartidosTorneoCtrl?idTorneo=${torneo.idTorneo}" class="btn btn-success btn-lg">Ingresar resultados</a>
                                     <a id="modificarUsuario" href="/TorneoTenisMesa/ConsultarPartidosTorneoCtrl?idTorneo=${torneo.idTorneo}" class="btn btn-success btn-lg">Modificar</a>
                                 </div>
                             </div>

@@ -58,4 +58,11 @@ public class Arbol extends Estructura {
     public int getCantidadPartidos() {
         return arbol.cantidad();
     }
+
+    @Override
+    public int getIdSiguientePartido() {
+        return 5;
+    }
+    
+    
 }//end Arbol

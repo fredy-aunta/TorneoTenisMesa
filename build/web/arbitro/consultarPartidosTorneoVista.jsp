@@ -62,6 +62,7 @@
                                             <td>${partido.idJugador1} - ${partido.idJugador2}</td>
                                             <td>${partido.resultado1} - ${partido.resultado2}</td>
                                             <td>
+                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/FormResultados?idPartido=${partido.idPartido}">Ingresar Resultados</a>
                                                 <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/ConsultarPartidoCtrl?idPartido=${partido.idPartido}">Modificar</a>
                                             </td>
                                         </tr>
