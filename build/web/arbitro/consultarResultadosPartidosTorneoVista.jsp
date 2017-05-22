@@ -32,11 +32,11 @@
                         </c:if>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <h3 class="">Torneos</h3>
+                                    <h3 class="">Partidos</h3>
                                 </div>
-                                <div class="col-md-offset-4 col-md-4 text-right">
+<!--                                <div class="col-md-offset-4 col-md-4 text-right">
                                     <a class="btn btn-success btn-xs" href="/TorneoTenisMesa/admin/crearTorneoVista.jsp">Crear Torneo</a>
-                                </div>
+                                </div>-->
                             </div>
                         
                         <c:choose>
@@ -50,7 +50,7 @@
                                             <th>Id Partido</th>
                                             <th>Fecha - hora</th>
                                             <th>Jugadores</th>
-                                            <th>Resultados</th>
+                                            <!--<th>Resultados</th>-->
                                             <th>&nbsp;</th>
                                         </tr>
                                     </thead>
@@ -60,10 +60,9 @@
                                             <td>${partido.idPartidoTorneo}</td>
                                             <td>${partido.fechaHoraF}</td>
                                             <td>${partido.idJugador1} - ${partido.idJugador2}</td>
-                                            <td>${partido.resultado1} - ${partido.resultado2}</td>
+                                            <!--<td>${partido.resultado1} - ${partido.resultado2}</td>-->
                                             <td>
-                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/FormResultados?idPartido=${partido.idPartido}">Ingresar Resultados</a>
-                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/ConsultarPartidoCtrl?idPartido=${partido.idPartido}">Modificar</a>
+                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/FormResultados?idPartido=${partido.idPartido}&edit=0">Consultar Resultados</a>
                                             </td>
                                         </tr>
                                         </c:forEach>

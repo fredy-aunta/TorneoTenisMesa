@@ -66,7 +66,7 @@
                                             <td>${torneo.cantidadJugadores}</td>
                                             <td>${torneo.cantidadMesas}</td>
                                             <td>
-                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/ConsultarTorneoCtrl?idTorneo=${torneo.idTorneo}">Consultar</a>
+                                                <a class="btn btn-info btn-xs" href="/TorneoTenisMesa/ConsultarTorneo?idTorneo=${torneo.idTorneo}">Consultar</a>
                                             </td>
                                         </tr>
                                         </c:forEach>

@@ -58,4 +58,12 @@ public class Arbol extends Estructura {
     public int getCantidadPartidos() {
         return arbol.cantidad();
     }
+
+    @Override
+    public int getIdSiguientePartido(int idPartidoTorneo) {
+        arbol.padre(arbol.raiz, idPartidoTorneo);
+        return arbol.res;
+    }
+    
+    
 }//end Arbol

@@ -77,6 +77,16 @@
                                     <a id="modificarUsuario" href="/TorneoTenisMesa/ConsultarPartidosTorneoCtrl?idTorneo=${torneo.idTorneo}" class="btn btn-success btn-lg">Modificar</a>
                                 </div>
                             </div>
+                                <hr/>
+                            <div class="form-group text-right">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <div class="btn-group" role="group">
+                                        <a id="modificarUsuario" href="/TorneoTenisMesa/ConsultarResultadosPartidosTorneo?idTorneo=${torneo.idTorneo}" class="btn btn-info">Consultar resultados</a>
+                                        <a id="modificarUsuario" href="/TorneoTenisMesa/ConsultarPartidosTorneoCtrl?idTorneo=${torneo.idTorneo}" class="btn btn-info">Ingresar resultados</a>
+                                    </div>
+                                </div>
+                            </div>
+                                
                         </form>
                     </div>
                 </div>

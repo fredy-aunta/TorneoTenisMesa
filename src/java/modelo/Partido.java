@@ -96,4 +96,22 @@ public class Partido {
         SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         return dt1.format(this.getFechaHora());
     }
+    public boolean terminado(){
+        return (esGanador1() || esGanador2());
+    }
+    private boolean esGanador1(){
+        return (getResultado1() >= 11 && (getResultado1() - getResultado2()) >= 2);
+    }
+    private boolean esGanador2(){
+        return (getResultado2() >= 11 && (getResultado2() - getResultado1()) >= 2);
+    }
+    public int getIdGanador(){
+        if (esGanador1()) {
+            return getIdJugador1();
+        }
+        if (esGanador2()) {
+            return getIdJugador2();
+        }
+        return 0;
+    }
 }//end Partido

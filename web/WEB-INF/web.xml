@@ -45,7 +45,7 @@
         <servlet-class>servlets.NumeroJugadoresCtrl</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ConsultarTorneoCtrl</servlet-name>
+        <servlet-name>ConsultarTorneo</servlet-name>
         <servlet-class>servlets.ConsultarTorneoCtrl</servlet-class>
     </servlet>
     <servlet>
@@ -63,6 +63,22 @@
     <servlet>
         <servlet-name>AsociarUsuariosCtrl</servlet-name>
         <servlet-class>servlets.AsociarUsuariosCtrl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IngresarResultadoCtrl</servlet-name>
+        <servlet-class>servlets.IngresarResultadoCtrl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FormResultadosCtrl</servlet-name>
+        <servlet-class>servlets.FormResultadosCtrl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IngresarResultadoPartidoCtrl</servlet-name>
+        <servlet-class>servlets.IngresarResultadoPartidoCtrl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarResultadosPartidosTorneo</servlet-name>
+        <servlet-class>servlets.ConsultarResultadosPartidosTorneoCtrl</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
@@ -109,8 +125,8 @@
         <url-pattern>/NumeroJugadoresCtrl</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ConsultarTorneoCtrl</servlet-name>
-        <url-pattern>/ConsultarTorneoCtrl</url-pattern>
+        <servlet-name>ConsultarTorneo</servlet-name>
+        <url-pattern>/ConsultarTorneo</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ConsultarPartidosTorneoCtrl</servlet-name>
@@ -127,6 +143,22 @@
     <servlet-mapping>
         <servlet-name>AsociarUsuariosCtrl</servlet-name>
         <url-pattern>/AsociarUsuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresarResultadoCtrl</servlet-name>
+        <url-pattern>/IngresarResultado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormResultadosCtrl</servlet-name>
+        <url-pattern>/FormResultados</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresarResultadoPartidoCtrl</servlet-name>
+        <url-pattern>/IngresarResultadoPartido</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarResultadosPartidosTorneo</servlet-name>
+        <url-pattern>/ConsultarResultadosPartidosTorneo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

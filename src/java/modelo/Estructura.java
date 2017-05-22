@@ -21,6 +21,8 @@ public abstract class Estructura {
 	public abstract void crearEstructura(int cantidadJugadores);
         
         public abstract int getCantidadPartidos();
+        
+        public abstract int getIdSiguientePartido(int idPartidoTorneo);
 
     public int getIdEstructura() {
         return idEstructura;
