@@ -60,8 +60,9 @@ public class Arbol extends Estructura {
     }
 
     @Override
-    public int getIdSiguientePartido() {
-        return 5;
+    public int getIdSiguientePartido(int idPartidoTorneo) {
+        arbol.padre(arbol.raiz, idPartidoTorneo);
+        return arbol.res;
     }
     
     

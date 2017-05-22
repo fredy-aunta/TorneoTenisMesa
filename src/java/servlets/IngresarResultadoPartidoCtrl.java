@@ -63,7 +63,7 @@ public class IngresarResultadoPartidoCtrl extends HttpServlet {
         
         boolean subidos = partidoDB.subirResultados(partido);
         if (partido.terminado() && torneo.getEstructura().getIdEstructura() == FactoriaEstructura.ESTRUCTURA_ARBOL) {
-            partidoDB.definirSiguientePartido(torneo,partido.getIdGanador());
+            partidoDB.definirSiguientePartido(torneo,partido);
         }
         request.setAttribute("subidos", subidos);
         request.setAttribute("partido", partido);

@@ -22,7 +22,7 @@ public abstract class Estructura {
         
         public abstract int getCantidadPartidos();
         
-        public abstract int getIdSiguientePartido();
+        public abstract int getIdSiguientePartido(int idPartidoTorneo);
 
     public int getIdEstructura() {
         return idEstructura;

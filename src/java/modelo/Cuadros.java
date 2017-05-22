@@ -22,7 +22,7 @@ public class Cuadros extends Estructura {
     }
 
     @Override
-    public int getIdSiguientePartido() {
+    public int getIdSiguientePartido(int idPartidoTorneo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

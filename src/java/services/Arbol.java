@@ -11,7 +11,8 @@ package services;
  * @author DELL
  */
 public class Arbol {
-    private Nodo raiz;
+    public int res;
+    public Nodo raiz;
     int cant;
     int altura;
 
@@ -220,5 +221,24 @@ public class Arbol {
     }
     public void recorridoPreorden() {
         ayudantePreorden(raiz);
+    }
+    
+    public void padre(Nodo padre, int hijo){
+       int p = 0;
+        if (padre==null){
+            return ;
+          }
+            if(padre.getIzq().getDato() == hijo){
+                p = padre.getDato();
+                res = padre.getDato();
+            }else if(padre.getDer().getDato()==hijo){
+                p = padre.getDato();
+                res = padre.getDato();
+            }else if (padre.getIzq().getIzq()!=null){
+                padre(padre.getIzq(), hijo);
+                padre(padre.getDer(), hijo);
+            }
+            
+        return ;
     }
 }

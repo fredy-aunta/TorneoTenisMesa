@@ -328,16 +328,18 @@ public class PartidoDB {
         return subidos;
     } 
     
-    public boolean definirSiguientePartido(Torneo torneo, int idNextUsuario){
+    public boolean definirSiguientePartido(Torneo torneo, Partido partido){
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
-        int idUsuarioPartido, index, rows = 0;
+        int idUsuarioPartido, index, rows = 0, idNextUsuario = partido.getIdGanador();
         try {
             connection = DBManager.getConnection();
             statement = connection.prepareStatement(SQL_NEXT_USUARIO_PARTIDO);
             index = 1;
-            statement.setInt(index++, torneo.getEstructura().getIdSiguientePartido());
+            Estructura e = torneo.getEstructura();
+            e.crearEstructura(torneo.getCantidadJugadores());
+            statement.setInt(index++, e.getIdSiguientePartido(partido.getIdPartidoTorneo()));
             statement.setInt(index++, torneo.getIdTorneo());
             rs = statement.executeQuery();
             rs.next();
