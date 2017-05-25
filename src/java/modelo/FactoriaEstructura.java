@@ -13,9 +13,6 @@ public class FactoriaEstructura {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
 	public static Estructura getEstructura(int idEstructura){
             Estructura estructura = null;
             switch(idEstructura) {
