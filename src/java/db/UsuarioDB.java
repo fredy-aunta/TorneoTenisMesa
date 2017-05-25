@@ -292,7 +292,7 @@ public class UsuarioDB {
     }
     
     public ArrayList<Usuario> getArbitros(){
-        ArrayList<Usuario> jugadores = new ArrayList<Usuario>();
+        ArrayList<Usuario> arbitros = new ArrayList<Usuario>();
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -325,7 +325,7 @@ public class UsuarioDB {
                 }
                 usuario.setFechaNacimiento(date);
                 
-                jugadores.add(usuario);
+                arbitros.add(usuario);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -334,7 +334,7 @@ public class UsuarioDB {
             DBManager.close(statement);
             DBManager.close(connection);
         }
-        return jugadores;
+        return arbitros;
     }
     /*
     public int delete(int id){

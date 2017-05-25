@@ -69,6 +69,9 @@
                             </div>
                         </form>
                     </div>
+                <div class="btn-group" role="group">
+                    <a id="volver" href="" class="btn btn-info">Volver</a>
+                </div>
                 </div>
             </div>
         </section>
@@ -90,6 +93,7 @@
                 }
             }
             var cantJ;
+            var cantA;
             $(document).ready(function (){
                 var date = new Date();
                 var dateFormated = date.getFullYear()+"-"+("0"+(date.getMonth()+1)).slice(-2)+"-"+("0"+(date.getDate()+1)).slice(-2)+" "+date.getHours()+":"+date.getMinutes();
@@ -110,12 +114,32 @@
                         alert(errorText);
                     }
                 });
+                $.ajax({
+                    url: "/TorneoTenisMesa/NumeroArbitrosCtrl",
+                    type: 'POST',
+                    dataType: "json",
+                    data: {},
+                    success: function(data, textStatus){
+                        cantA=data;
+                    },
+                    error: function(data, textStatus, extra) {
+                        var errorText = data.responseDetails;
+                        if (errorText == undefined){
+                            errorText = data.responseText;
+                        }
+                        alert(errorText);
+                    }
+                });
             });
+            
+            
+            
             
             $("#crearTorneo").click(function () {
                 var nombre = $("input[name='nombre']").val().trim();
                 var estructura = $("select[name='estructura']").val();
                 var numeroJugadores = $("input[name='numeroJugadores']").val().trim();
+                var numeroArbitros = $("input[name='numeroMesas']").val().trim();
                 var numeroMesas = $("input[name='numeroMesas']").val().trim()
                 var error = false;
                    
@@ -156,6 +180,9 @@
                     error = true
                 }else if(numeroJugadores>cantJ){
                     alert("El numero maximo de jugadores para crear un torneo no debe ser mayor a: "+cantJ);
+                    error = true
+                }else if(numeroArbitros>cantA){
+                    alert("El numero maximo de mesas para crear un torneo no debe ser mayor a: "+cantA);
                     error = true
                 }else if(estructura==1 && numeroJugadores>numA){
                     alert("Para la esturctura arbol el numero maximo de jugadores no puede ser mayor a: "+numA);
