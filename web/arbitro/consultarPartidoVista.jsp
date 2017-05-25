@@ -60,6 +60,9 @@
                                     <button id="crearUsuario" type="button" class="btn btn-success btn-lg">Modificar</button>
                                 </div>
                             </div>
+                            <div class="btn-group" role="group">
+                                <a id="volver" href="" class="btn btn-info">Volver</a>
+                            </div>
                         </form>
                     </div>
                 </div>

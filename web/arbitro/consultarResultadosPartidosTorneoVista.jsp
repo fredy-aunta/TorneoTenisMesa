@@ -72,6 +72,9 @@
                         </c:choose>
                     </div>
                 </div>
+                <div class="btn-group" role="group">
+                    <a id="volver" href="" class="btn btn-info">Volver</a>
+                </div>
             </div>
         </section>
         <jsp:include page="_footer.jsp"/>

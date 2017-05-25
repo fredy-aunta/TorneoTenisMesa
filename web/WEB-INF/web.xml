@@ -80,6 +80,10 @@
         <servlet-name>ConsultarResultadosPartidosTorneo</servlet-name>
         <servlet-class>servlets.ConsultarResultadosPartidosTorneoCtrl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NumeroArbitrosCtrl</servlet-name>
+        <servlet-class>servlets.NumeroArbitrosCtrl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
@@ -159,6 +163,10 @@
     <servlet-mapping>
         <servlet-name>ConsultarResultadosPartidosTorneo</servlet-name>
         <url-pattern>/ConsultarResultadosPartidosTorneo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NumeroArbitrosCtrl</servlet-name>
+        <url-pattern>/NumeroArbitrosCtrl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

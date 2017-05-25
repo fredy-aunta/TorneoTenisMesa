@@ -72,6 +72,7 @@
                                                 </c:forEach>
                                             </tbody>
                                         </table>
+                                            <a id="volver" href="" class="btn btn-info">Volver</a>
                                             <button type="submit" class="btn btn-success">Siguiente</button>
                                         </form>
                                     </div>
