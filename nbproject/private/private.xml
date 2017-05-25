@@ -3,47 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/modelo/Partido.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/services/Nodo.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/_head.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/db/TorneoDB.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/AsociarUsuariosCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/modelo/Arbol.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/DefinirUsuariosTorneoCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/services/Arbol.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/crearTorneoVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/CrearEstructuraCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarTorneosCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/consultarTorneoVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarUsuariosCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/CrearUsuarioCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarPartidoCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/services/Partidos.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/crearEstructuraVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/arbitro/consultarPartidosTorneoVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/modelo/Estructura.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/consultarTorneosVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/db/PartidoDB.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/db/UsuarioDB.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/arbitro/consultarPartidoVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarUsuarioCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarPartidosTorneoCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/CrearTorneoCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ModificarUsuarioCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/UsuariosTorneoCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/usuariosTorneoVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/crearUsuarioVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/menuAdmin.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/consultarUsuarioVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/modelo/Cuadros.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/modelo/Usuario.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarTorneoCtrl.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/consultarUsuariosVista.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/modelo/Torneo.java</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/_head.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/web/admin/_footer.jsp</file>
-            <file>file:/C:/Users/DELL/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/IniciarSesionCtrl.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarPartidosTorneoCtrl.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ModificarPartidoCtrl.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/web/arbitro/consultarPartidosTorneoVista.jsp</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/db/PartidoDB.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/web/consultarTorneosVista.jsp</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/web/arbitro/resultadoPartidoVista.jsp</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/IngresarResultadoPartidoCtrl.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/db/TorneoDB.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/ConsultarResultadosPartidosTorneoCtrl.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/web/consultarTorneoVista.jsp</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/src/java/servlets/FormResultadosCtrl.java</file>
+            <file>file:/C:/Users/Sebastián/Documents/NetBeansProjects/TorneoTenisMesa/web/arbitro/consultarResultadosPartidosTorneoVista.jsp</file>
         </group>
     </open-files>
 </project-private>
