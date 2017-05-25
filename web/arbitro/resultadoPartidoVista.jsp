@@ -32,10 +32,10 @@
                                 <div class="col-sm-8">
                                     <c:choose>
                                         <c:when test="${ingresarResultados == true}">
-                                            <input type="text" class="form-control" id="jugadores" name="resultado1" value="${partido.resultado1}">
+                                            <input type="text" class="form-control" id="resultado1" name="resultado1" value="${partido.resultado1}">
                                         </c:when>
                                         <c:otherwise>
-                                            <input type="text" class="form-control edit" id="jugadores" name="resultado1" value="${partido.resultado1}" readonly>
+                                            <input type="text" class="form-control edit" id="resultado1" name="resultado1" value="${partido.resultado1}" readonly>
                                         </c:otherwise>
                                       </c:choose>
                                 </div>
@@ -45,10 +45,10 @@
                                 <div class="col-sm-8">
                                     <c:choose>
                                         <c:when test="${ingresarResultados == true}">
-                                            <input type="text" class="form-control" id="jugadores" name="resultado2" value="${partido.resultado2}">
+                                            <input type="text" class="form-control" id="resultado2" name="resultado2" value="${partido.resultado2}">
                                         </c:when>
                                         <c:otherwise>
-                                            <input type="text" class="form-control edit" id="jugadores" name="resultado2" value="${partido.resultado2}" readonly>
+                                            <input type="text" class="form-control edit" id="resultado2" name="resultado2" value="${partido.resultado2}" readonly>
                                         </c:otherwise>
                                       </c:choose>
                                 </div>

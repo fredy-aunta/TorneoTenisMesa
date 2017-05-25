@@ -72,7 +72,7 @@ public class ModificarPartidoCtrl extends HttpServlet {
         int tipo = ValidarSesion.getTipoUsuarioSesion(session);
         request.setAttribute("tipo",tipo);
         partido = partidoDB.buscarPartido(idPartido);
-        request.setAttribute("partido", partidoDB.buscarPartido(idPartido));
+        request.setAttribute("partido", partido);
         request.getRequestDispatcher("/arbitro/consultarPartidoVista.jsp").forward(request, response);
     }
 

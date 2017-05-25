@@ -36,7 +36,7 @@ public class PartidoDB {
     private final String SQL_INSERT_ID = "SELECT @@identity AS id";
     private final String SQL_INSERT_USUARIO_PARTIDO = "INSERT INTO usuariopartido (idPartido,idUsuario) VALUES (?,?);";
     private final String SQL_PARTIDOS = "SELECT p.idPartido, p.fechaHora, p.idPartidoTorneo," +
-"	group_concat(up.idUsuario order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') usuarios," +
+"	group_concat(up.idUsuario order by up.idUsuarioPartido ASC, u.tipo ASC SEPARATOR ' ') usuarios," +
 "    group_concat(up.resultado order by up.idUsuarioPartido ASC, u.tipo ASC SEPARATOR ' ') resultados," +
 "    group_concat(u.tipo order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') tipos" +
 " FROM " + TABLE_NAME + " p" +
@@ -45,8 +45,8 @@ public class PartidoDB {
 " where p.idTorneo = ?" +
 " group by p.idPartido";
     private final String SQL_PARTIDO = "SELECT p.idPartido, p.fechaHora, p.idPartidoTorneo," +
-"	group_concat(up.idUsuario order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') usuarios," +
-"    group_concat(up.resultado order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') resultados," +
+"	group_concat(up.idUsuario order by up.idUsuarioPartido ASC, u.tipo ASC SEPARATOR ' ') usuarios," +
+"    group_concat(up.resultado order by up.idUsuarioPartido ASC, u.tipo ASC SEPARATOR ' ') resultados," +
 "    group_concat(u.tipo order by p.idPartidoTorneo ASC, u.tipo ASC SEPARATOR ' ') tipos" +
 " FROM " + TABLE_NAME + " p" +
 " join usuarioPartido up on up.idPartido = p.idPartido" +
