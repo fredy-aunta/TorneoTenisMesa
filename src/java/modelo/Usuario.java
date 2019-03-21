@@ -23,7 +23,6 @@ public class Usuario implements Serializable{
 	private String nombreUsuario;
 	private String tipo;
         private String telefono;
-        private Date fechaNacimiento;
 
 	public Usuario(){
 
@@ -101,16 +100,4 @@ public class Usuario implements Serializable{
         this.telefono = telefono;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-    
-    public String getFechaNacimientoFormat(){
-        SimpleDateFormat dt1 = new SimpleDateFormat("yyyy-MM-dd");
-        return dt1.format(this.getFechaNacimiento());
-    }
 }//end Usuario

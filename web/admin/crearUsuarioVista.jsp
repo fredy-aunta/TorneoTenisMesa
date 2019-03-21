@@ -27,7 +27,7 @@
                                         <button type="button" class="btn btn-default user_types" name="user_type" value="jugador">Jugador</button>
                                         <button type="button" class="btn btn-default user_types" name="user_type" value="arbitro">Arbitro</button>
                                         <button type="button" class="btn btn-default user_types" name="user_type" value="admin">Administrador</button>
-                                        <button type="button" class="btn btn-default user_types" name="user_type" value="apostador">Apostador</button>
+                                        <!--<button type="button" class="btn btn-default user_types" name="user_type" value="apostador">Apostador</button>-->
                                     </div>
                                 </div>
                             </div>
@@ -54,12 +54,6 @@
                                 <label for="telefono" class="col-sm-4 control-label">Telefono</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="fechaNacimiento" class="col-sm-4 control-label">Fecha de Nacimiento</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="fechaNacimiento" name="fechaNacimiento" placeholder="yyyy-mm-dd">
                                 </div>
                             </div>
                             </div>
