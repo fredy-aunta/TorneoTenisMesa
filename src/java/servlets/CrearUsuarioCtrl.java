@@ -65,7 +65,15 @@ public class CrearUsuarioCtrl extends HttpServlet {
             usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
             usuario.setClave(request.getParameter("clave"));
             usuario.setTelefono(request.getParameter("telefono"));
-            
+            Date date = null;
+            String fechaNacimiento = request.getParameter("fechaNacimiento");
+            DateFormat format = new SimpleDateFormat("yyyy-M-dd");
+            try {
+                date = format.parse(fechaNacimiento);
+            } catch (ParseException ex) {
+                Logger.getLogger(ModificarUsuarioCtrl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            usuario.setFechaNacimiento(date);
             usuario.setTipo(tipo);
             int idUsuario = usuarioDB.insert(usuario);
             request.setAttribute("idUsuario", idUsuario);
